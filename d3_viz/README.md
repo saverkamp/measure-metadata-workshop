@@ -16,4 +16,4 @@ Or (for python 3+)
   python3 -m http.server
 ```
 
-And then visit http://localhost:8000/ in your web browser.
+And then visit [http://localhost:8000/](http://localhost:8000/) in your web browser.
