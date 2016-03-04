@@ -1,0 +1,226 @@
+[
+    {
+        "count": 3989, 
+        "tag": "placeTerm"
+    }, 
+    {
+        "count": 5, 
+        "tag": "recordContentSource"
+    }, 
+    {
+        "count": 20, 
+        "tag": "classification"
+    }, 
+    {
+        "count": 1, 
+        "tag": "apr"
+    }, 
+    {
+        "count": 33, 
+        "tag": "abstract"
+    }, 
+    {
+        "count": 718, 
+        "tag": "languageTerm"
+    }, 
+    {
+        "count": 4036, 
+        "tag": "topic"
+    }, 
+    {
+        "count": 106, 
+        "tag": "edition"
+    }, 
+    {
+        "count": 5, 
+        "tag": "recordOrigin"
+    }, 
+    {
+        "count": 28, 
+        "tag": "cr"
+    }, 
+    {
+        "count": 1, 
+        "tag": "huntington"
+    }, 
+    {
+        "count": 15, 
+        "tag": "occupation"
+    }, 
+    {
+        "count": 3, 
+        "tag": "jan"
+    }, 
+    {
+        "count": 2, 
+        "tag": "scale"
+    }, 
+    {
+        "count": 106, 
+        "tag": "subTitle"
+    }, 
+    {
+        "count": 5292, 
+        "tag": "shelfLocator"
+    }, 
+    {
+        "count": 7051, 
+        "tag": "title"
+    }, 
+    {
+        "count": 5, 
+        "tag": "dateOther"
+    }, 
+    {
+        "count": 6, 
+        "tag": "accessCondition"
+    }, 
+    {
+        "count": 154, 
+        "tag": "coordinates"
+    }, 
+    {
+        "count": 11786, 
+        "tag": "note"
+    }, 
+    {
+        "count": 4109, 
+        "tag": "dateIssued"
+    }, 
+    {
+        "count": 2, 
+        "tag": "oct"
+    }, 
+    {
+        "count": 1, 
+        "tag": "geographicCode"
+    }, 
+    {
+        "count": 2, 
+        "tag": "mar"
+    }, 
+    {
+        "count": 146, 
+        "tag": "form"
+    }, 
+    {
+        "count": 2, 
+        "tag": "may"
+    }, 
+    {
+        "count": 1, 
+        "tag": "june"
+    }, 
+    {
+        "count": 19, 
+        "tag": "tableOfContents"
+    }, 
+    {
+        "count": 1638, 
+        "tag": "dateCreated"
+    }, 
+    {
+        "count": 1, 
+        "tag": "jl"
+    }, 
+    {
+        "count": 192, 
+        "tag": "issuance"
+    }, 
+    {
+        "count": 449, 
+        "tag": "extent"
+    }, 
+    {
+        "count": 1256, 
+        "tag": "genre"
+    }, 
+    {
+        "count": 1, 
+        "tag": "feb"
+    }, 
+    {
+        "count": 1, 
+        "tag": "july"
+    }, 
+    {
+        "count": 1, 
+        "tag": "descriptionStandard"
+    }, 
+    {
+        "count": 14, 
+        "tag": "name"
+    }, 
+    {
+        "count": 1, 
+        "tag": "a"
+    }, 
+    {
+        "count": 3396, 
+        "tag": "publisher"
+    }, 
+    {
+        "count": 9044, 
+        "tag": "physicalLocation"
+    }, 
+    {
+        "count": 1015, 
+        "tag": "geographic"
+    }, 
+    {
+        "count": 1, 
+        "tag": "aug"
+    }, 
+    {
+        "count": 29, 
+        "tag": "copyrightDate"
+    }, 
+    {
+        "count": 1, 
+        "tag": "url"
+    }, 
+    {
+        "count": 2, 
+        "tag": "partName"
+    }, 
+    {
+        "count": 1, 
+        "tag": "no"
+    }, 
+    {
+        "count": 8, 
+        "tag": "scriptTerm"
+    }, 
+    {
+        "count": 6924, 
+        "tag": "namePart"
+    }, 
+    {
+        "count": 11204, 
+        "tag": "roleTerm"
+    }, 
+    {
+        "count": 1, 
+        "tag": "mr"
+    }, 
+    {
+        "count": 31, 
+        "tag": "partNumber"
+    }, 
+    {
+        "count": 19875, 
+        "tag": "identifier"
+    }, 
+    {
+        "count": 1, 
+        "tag": "sept"
+    }, 
+    {
+        "count": 2782, 
+        "tag": "typeOfResource"
+    }, 
+    {
+        "count": 1364, 
+        "tag": "nonSort"
+    }
+]

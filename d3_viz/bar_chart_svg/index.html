@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SVG simple</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+       <!-- <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">-->
+        <script src="../libraries/d3.min.js"></script>
+
+
+        <!-- The styles used in the d3 SVG/HTML -->
+
+        <style>
+
+            rect {
+                fill: lightsteelblue;
+            }
+
+            text {
+                fill: black;
+                font: 10px sans-serif;
+                text-anchor: start;
+            }
+
+        </style>
+
+
+        <!-- The javascript to build the viz -->
+
+        <script>
+
+
+
+
+            // load the external data
+            d3.json("../pre_baked_data/xml_field_per_file_count.json", function(error, data) {
+
+                if (error){
+                    alert("Error loading json file");
+                }
+
+
+                var width = 960,
+                    height = 500,
+                    marginBottom = 100,
+                    marginRight = 100;
+
+
+                var barWidth = width / data.length;
+
+
+                //we need to know the total number of collections(XML files) that were processed
+                //this could be passed in the data file but it is simpler to just hardcode it here as an example
+                var totalCollection = 5921;
+
+                //now we can set the domain and range of the bar charts
+                //the domain is min max of our data (number of collections/files)
+                //the range is the translation into a linear value between 0 and x (here we are using the width defined above)
+
+                var linearScaleFunction = d3.scale.linear()
+                    .domain([0, totalCollection])
+                    .range([0, height]);
+
+                d3.select("body").append("h1").text("Out of " + totalCollection + " Collections")
+
+
+                var chart = d3.select("body").append("svg")
+                    .attr("width", width+marginRight)
+                    .attr("height", height+marginBottom);
+
+                var bar = chart.selectAll("rect")
+                    .data(data)
+                    .enter().append("rect")
+                    .attr("x", function(d,i) { return (barWidth * i); })
+                    .attr("y", function(d) { return height - linearScaleFunction(d.count); })
+                    .attr("height", function(d) { return linearScaleFunction(d.count); })
+                    .attr("title",function(d){return d.count})
+                    .attr("width", barWidth - 1)
+                    .on('mouseover', function(d){
+                        //change color and update the header text
+                        d3.select(this).style({fill:'steelblue'})
+                        d3.select("h1").text("Out of " + totalCollection + " Collections <" + d.tag + "> in " + d.count  + " (" + Math.floor(d.count/totalCollection*100) + "%)")
+                    }).on('mouseout', function(d){
+                        d3.select(this).style({fill:'lightsteelblue'})
+                    });
+
+
+                //draw the labels, we'
+                var labels = chart.selectAll(".labels")
+                    .data(data)
+                    .enter()
+                    .append("g")
+                        .attr("class","labels")
+                        .attr("transform", function(d,i) { return "translate("+((barWidth * i) + 3)+","+ (height+ 10) +"),rotate(45)"})
+                        .append("text")
+                            .text(function(d) { return d.tag + " (" + Math.floor(d.count/totalCollection*100) + "%)"; });
+
+
+
+            });
+
+        </script>
+
+    </head>
+
+
+
+
+    <body>
+
+
+    </body>
+
+
+
+
+
+</html>
