@@ -13,7 +13,7 @@ Schedule:
 1:30 - 1:45 Introductions  
 1:45 - 2:45 [Presentations](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
 2:45 - 2:55 Break  
-2:55 - 4:10 [Hands-on sessions](https://docs.google.  com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
+2:55 - 4:10 [Hands-on sessions](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
 4:10 - 4:30 Reporting back and discussion  
 
 ##Before you attend
