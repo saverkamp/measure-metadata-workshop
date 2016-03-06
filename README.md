@@ -10,10 +10,10 @@ Coordinators: Shawn Averkamp, Sara Rubinow, Matt Miller, Josh Hadro
 Tools and standards abound for creating and enriching metadata, but measuring, monitoring, and managing metadata for the long haul can be a daunting task. What tools are out there to assess the shape of our metadata? How can visualizations show us the gaps or flaws in our description? What can web traffic analytics tell us about the value of our metadata? What is quality, really? We certainly don’t have all the answers, but together we can workshop the questions. Specific topics will be driven by the interest of attendees. The organizers will bring examples of their own work at NYPL in visualization, data analysis with Python, and Google analytics assessment and invite participants to bring their own tools and strategies to share in group discussion, short demos, and hands-on breakout sessions. Takeaways will include: exposure to approaches and tools in use in the field and an expanded network of commiserators to help you through your next metadata audit.
 
 Schedule:  
-1:30 - 1:45 Introductions  
-1:45 - 2:45 [Presentations](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
-2:45 - 2:55 Break  
-2:55 - 4:10 [Hands-on sessions](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
+1:30 - 1:40 Introductions  
+1:40 - 3:00 [Presentations](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
+3:00 - 3:10 Break  
+3:10 - 4:10 [Hands-on sessions](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
 4:10 - 4:30 Reporting back and discussion  
 
 ##Before you attend
