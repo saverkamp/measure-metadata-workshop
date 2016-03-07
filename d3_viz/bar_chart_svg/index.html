@@ -43,6 +43,10 @@
                     alert("Error loading json file");
                 }
 
+                //we need to know the total number of collections(XML files) that were processed
+                //this could be passed in the data file but it is simpler to just hardcode it here as an example
+                var totalCollection = 5921;
+
 
                 var width = 960,
                     height = 500,
@@ -53,9 +57,7 @@
                 var barWidth = width / data.length;
 
 
-                //we need to know the total number of collections(XML files) that were processed
-                //this could be passed in the data file but it is simpler to just hardcode it here as an example
-                var totalCollection = 5921;
+
 
                 //now we can set the domain and range of the bar charts
                 //the domain is min max of our data (number of collections/files)
