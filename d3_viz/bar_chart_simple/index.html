@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Barchart simple</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="../libraries/d3.min.js"></script>
+
+
+        <!-- The styles used in the d3 SVG/HTML -->
+        <style>
+
+            .chart div {
+                font: 20px sans-serif;
+                background-color: lightsteelblue;
+                text-align: right;
+                padding: 5px;
+                margin: 3px;
+                color: black;
+                overflow: visible;
+                white-space: nowrap;
+
+            }
+        </style>
+
+
+        <!-- The javascript to build the viz -->
+        <script>
+
+            // load the external data
+            d3.json("../pre_baked_data/xml_field_count.json", function(error, data) {
+
+                if (error){
+                    alert("Error loading json file");
+                }
+
+
+                //we want to know the total number of fields so we can set the domain the scale
+                //so loop through the data and add up the total number of fields
+                var totalFields = 0;
+
+                for (var aField in data){
+                    totalFields = totalFields + data[aField]['count'];
+                }
+
+                console.log("There are ", totalFields, "total fields")
+
+                //now we can set the domain and range of the bar charts
+                //the domain is min max of our data (count of fields)
+                //the range is the translation into a linear value between 0 and x (here we are using 5000)
+                var linearScaleFunction = d3.scale.linear()
+                    .domain([0, totalFields])
+                    .range([0, 5000]);
+
+                d3.select("h1").text("Out of " + totalFields + " elements.")
+
+                d3.select(".chart")
+                    .selectAll("div")
+                    .data(data)
+                    .enter().append("div")
+                    .style("width", function(d) { return linearScaleFunction(d.count) + "px"; })
+                    .text(function(d) { return d.tag; });
+
+                });
+
+
+
+        </script>
+
+
+    </head>
+    <body>
+
+
+        <h1></h1>
+
+        <div class="chart"></div>
+
+
+    </body>
+</html>

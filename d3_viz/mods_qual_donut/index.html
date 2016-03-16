@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DONUTS!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="../libraries/d3.min.js"></script>
+
+
+        <!-- The styles used in the d3 SVG/HTML -->
+
+        <style>
+
+            .arc text {
+              font: 10px sans-serif;
+              text-anchor: middle;
+            }
+
+            .arc path {
+              stroke: #fff;
+            }
+
+        </style>
+
+
+        <!-- The javascript to build the viz -->
+
+        <script>
+
+
+
+
+            // load the external data
+            d3.csv("../pre_baked_data/sample_mods_scores.csv", function(error, data) {
+
+                if (error){
+                    alert("Error loading csv file");
+                }
+
+
+                //the CSV data is transformed into an array of objects that look like this:
+                // {
+                //     collection: "Maps of North America.",
+                //     date: "1",
+                //     division: "Lionel Pincus and Princess Firyal Map Division",
+                //     genre: "0",
+                //     identifier: "1",
+                //     location: "1",
+                //     title: "1",
+                //     total: "5",
+                //     typeOfResource: "1",
+                //     uuid: "5db7ad80-c52a-012f-0a4c-3c075448cc4b"
+                // }
+
+                //lets look at the data by divsion so we need to build a new object by division
+                var allDivsions = {};
+                for (var x in data){
+                    var aItem = data[x];
+                    //the division name will be our key
+                    //do we have this division in our data yet?
+                    if (!allDivsions[aItem.division]){
+                        allDivsions[aItem.division] = { total: 0, hasDate: 0 };
+                    }
+                    //see if this one has a date and update the object
+                    if (aItem.date == 1){
+                        allDivsions[aItem.division].hasDate++
+                    }
+                    //++ the total items for this division
+                    allDivsions[aItem.division].total++
+                }
+
+
+                //lets make a donut for each division
+                for (var division in allDivsions){
+
+                    //a donut normally has more than one data point,
+                    //so we need to add the number of things that do not have dates
+                    allDivsions[division].noDate = allDivsions[division].total - allDivsions[division].hasDate
+
+                    //these are the data points we are going to render
+                    var dataPoints = [
+                        { label: "Has Date", count: allDivsions[division].hasDate},
+                        { label: "No Date", count: allDivsions[division].noDate}
+                    ]
+
+
+                    //set some static sizes of the viz
+                    var width = 960,
+                        height = 500,
+                        radius = Math.min(width, height) / 2;
+
+                    //a donut is just two arcs
+                    var arc = d3.svg.arc()
+                        .outerRadius(radius - 20)
+                        .innerRadius(radius - 120);
+
+                    var pie = d3.layout.pie()
+                        .value(function(d) { return d.count; });
+
+
+                    //lets append a title
+                    var svg = d3.select("body").append("h1").text(division)
+
+                    //Add in the main SVG and g element and center it
+                    var svg = d3.select("body").append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append("g")
+                        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                    //add in the arcs, use the pie layout to
+                    //figure out how big each data point should be
+                    var g = svg.selectAll(".arc")
+                        .data(pie(dataPoints))
+                        .enter().append("g")
+                        .attr("class", "arc");
+
+                    //set the color if it is date/no date
+                    g.append("path")
+                      .attr("d", arc)
+                      .style("fill", function(d) {console.log(d); return (d.data.label === "No Date") ? "#c0392b" : "#2980b9"  });
+
+                    //add in a label, use the helper method
+                    //(arc.centroid) to figure out where
+                    //the middle of the arc is.
+                    g.append("text")
+                      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+                      .attr("dy", ".5em")
+                      .style("font-size","1.25em")
+                      .text(function(d) { return d.data.label + " " + d.data.count; });
+
+
+                }
+
+
+            });
+
+        </script>
+
+    </head>
+
+
+
+
+    <body>
+
+
+    </body>
+
+
+
+
+
+</html>

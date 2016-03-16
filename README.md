@@ -10,10 +10,10 @@ Coordinators: Shawn Averkamp, Sara Rubinow, Matt Miller, Josh Hadro
 Tools and standards abound for creating and enriching metadata, but measuring, monitoring, and managing metadata for the long haul can be a daunting task. What tools are out there to assess the shape of our metadata? How can visualizations show us the gaps or flaws in our description? What can web traffic analytics tell us about the value of our metadata? What is quality, really? We certainly don’t have all the answers, but together we can workshop the questions. Specific topics will be driven by the interest of attendees. The organizers will bring examples of their own work at NYPL in visualization, data analysis with Python, and Google analytics assessment and invite participants to bring their own tools and strategies to share in group discussion, short demos, and hands-on breakout sessions. Takeaways will include: exposure to approaches and tools in use in the field and an expanded network of commiserators to help you through your next metadata audit.
 
 Schedule:  
-1:30 - 1:45 Introductions  
-1:45 - 2:45 [Presentations](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
-2:45 - 2:55 Break  
-2:55 - 4:10 [Hands-on sessions](https://docs.google.  com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
+1:30 - 1:40 Introductions  
+1:40 - 3:00 [Presentations](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
+3:00 - 3:10 Break  
+3:10 - 4:10 [Hands-on sessions](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
 4:10 - 4:30 Reporting back and discussion  
 
 ##Before you attend
@@ -24,6 +24,9 @@ For this hands-on session, we'll be using [Jupyter (IPython) notebook](http://ju
 
 ###A beginner's guide to metadata analysis in Python with pandas
 For this hands-on session, we'll be using [Jupyter (IPython) notebook](http://jupyter.org/) to explore basic data analysis with [pandas](http://pandas.pydata.org/), a Python data analysis library. Fortunately, both IPython notebook and pandas (as well as two additionally-necessary packages, [numpy](http://www.numpy.org/) and [matplotlib](http://matplotlib.org/)) are already included in the [Anaconda Python distribution](https://www.continuum.io/why-anaconda). We strongly recommend [installing Anaconda](http://docs.continuum.io/anaconda/install) for this session. It also comes bundled with [lxml](http://lxml.de/), a third-party Python library for parsing and manipulating XML, so it will be useful to have if you're interested in learning more about using Python to parse your XML data.
+
+###Visualizing your metadata with d3
+This hands-on session will be a beginner's intro to the d3 visualization library. We will use it to try to render metadata quality results which allows quick visual analysis. All you will need for this session are the examples and data provided in the d3_viz folder, a text editor and a web browser.
 
 ##Notes and Resources
 During the workshop, we'll take collaborative notes and share favorite resources in [this Google Doc](http://bit.ly/MeasureMetadataC4L16). We invite you to contribute!  
