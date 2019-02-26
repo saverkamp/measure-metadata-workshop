@@ -1,4 +1,4 @@
-##Measuring Your Metadata -- Code4Lib 2016 Pre-Conference Workshop
+## Measuring Your Metadata -- Code4Lib 2016 Pre-Conference Workshop
 Monday, March 7  
 1:30-4:30pm  
 Chemical Heritage Foundation  
@@ -16,17 +16,17 @@ Schedule:
 3:10 - 4:10 [Hands-on sessions](https://docs.google.com/spreadsheets/d/1ob4imuFCMi3fMkoIjlASBYWVdDd4qTVJj5xeG2eLEVM/edit#gid=634347005)  
 4:10 - 4:30 Reporting back and discussion  
 
-##Before you attend
+## Before you attend
 You'll get the most out of your hands-on sessions if you install the necessary applications ahead of time. If you're planning to participate in the following hands-on sessions, please try to come prepared!  
 
-###Using Python to assess metadata quality in MODS
+### Using Python to assess metadata quality in MODS
 For this hands-on session, we'll be using [Jupyter (IPython) notebook](http://jupyter.org/) to walk through some simple functions and scripts. We'll also be working with [lxml](http://lxml.de/), a third-party Python library for parsing and manipulating XML. Fortunately, both of these are already included in the [Anaconda Python distribution](https://www.continuum.io/why-anaconda). We strongly recommend [installing Anaconda](http://docs.continuum.io/anaconda/install) for this workshop. It also comes bundled with [pandas](http://pandas.pydata.org/) and all of its dependencies, so it will be useful to have it you're interested in learning more about data analysis.  
 
-###A beginner's guide to metadata analysis in Python with pandas
+### A beginner's guide to metadata analysis in Python with pandas
 For this hands-on session, we'll be using [Jupyter (IPython) notebook](http://jupyter.org/) to explore basic data analysis with [pandas](http://pandas.pydata.org/), a Python data analysis library. Fortunately, both IPython notebook and pandas (as well as two additionally-necessary packages, [numpy](http://www.numpy.org/) and [matplotlib](http://matplotlib.org/)) are already included in the [Anaconda Python distribution](https://www.continuum.io/why-anaconda). We strongly recommend [installing Anaconda](http://docs.continuum.io/anaconda/install) for this session. It also comes bundled with [lxml](http://lxml.de/), a third-party Python library for parsing and manipulating XML, so it will be useful to have if you're interested in learning more about using Python to parse your XML data.
 
-###Visualizing your metadata with d3
+### Visualizing your metadata with d3
 This hands-on session will be a beginner's intro to the d3 visualization library. We will use it to try to render metadata quality results which allows quick visual analysis. All you will need for this session are the examples and data provided in the d3_viz folder, a text editor and a web browser.
 
-##Notes and Resources
+## Notes and Resources
 During the workshop, we'll take collaborative notes and share favorite resources in [this Google Doc](http://bit.ly/MeasureMetadataC4L16). We invite you to contribute!  
